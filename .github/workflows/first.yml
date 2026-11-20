@@ -11,7 +11,7 @@ jobs:
       - name: Multi line string
         run: |
           pwd
-          mode -v
+          node -v
           ls -a
 
       - name: python command 
