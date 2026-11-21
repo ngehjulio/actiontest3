@@ -8,6 +8,12 @@ jobs:
     steps:
       - name: Checkout # checking out our code from the github repository to the virtual machine
         uses: actions/checkout@v1
+      - name: Set Terraform # after checking out our code we can set up Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.1.9
+      - name: Terraform Init # after setting up Terraform we can initialize it
+        run: terraform init
       - name: Multi line string
         run: |
           pwd
