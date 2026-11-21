@@ -22,7 +22,8 @@ jobs:
         run: terraform validate
       - name: Terraform plan
         run: terraform plan
-      - name: Multi line string
-        run: |
-          pwd
-          ls -a
+      - name: Terraform apply
+        run: terraform apply
+      - name: Terraform destroy
+        run: terraform destroy
+     
